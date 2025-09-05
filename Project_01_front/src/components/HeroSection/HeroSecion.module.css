@@ -24,7 +24,7 @@
     max-width: 35ch;
 }
 
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
     .hero {
         padding: 6rem 2rem;
     }
@@ -37,4 +37,4 @@
         font-size: 1.25rem;
         max-width: 50ch;
     }
-} */
+}
