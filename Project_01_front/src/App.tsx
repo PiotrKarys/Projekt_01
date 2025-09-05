@@ -1,6 +1,9 @@
 import { useState } from "react";
-import Navbar from "./components/Navbar.tsx";
-import HeroSection from "./components/HeroSection.tsx";
+import Navbar from "./components/Navbar/Navbar.tsx";
+import HeroSection from "./components/HeroSection/HeroSection.tsx";
+import AboutMe from "./components/AboutMe/AboutMe.tsx";
+import Projects from "./components/Projects/Projects.tsx";
+import Skills from "./components/Skills/Skills.tsx";
 
 function App() {
   return (
@@ -10,6 +13,9 @@ function App() {
         title="Piotras"
         subtitle="Specjalista ds. bezpieczeństwa & Entuzjasta Web Developmentu."
       />
+      <AboutMe />
+      <Projects />
+      <Skills />
     </div>
   );
 }
