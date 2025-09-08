@@ -2,7 +2,7 @@
     width: 100%;
     padding: clamp(3rem, 8vw, 5rem) clamp(1rem, 4vw, 2rem);
     box-sizing: border-box;
-    background-color: #1a1a1a;
+    background-color: var(--color-background-secondary);
 }
 
 .title {
@@ -10,6 +10,7 @@
     font-size: clamp(2rem, 4vw, 2.5rem);
     margin-top: 0;
     margin-bottom: 3rem;
+    color: var(--color-text-primary);
 }
 
 .skillsGrid {
@@ -17,32 +18,28 @@
     gap: 1.5rem;
     max-width: 56;
     margin: 0 auto;
-
-    /* === To jest nowa magia! ===
-     Ta linijka mówi: stwórz tyle kolumn, ile się zmieści (auto-fit),
-     ale każda kolumna ma mieć minimalnie 120px szerokości,
-     a jeśli jest więcej miejsca, niech się równo rozłożą (1fr).
-     Dzięki temu siatka jest idealnie płynna bez media queries! */
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
 .skillCard {
-    background-color: #242424;
+    background-color: var(--color-background);
     padding: 1.5rem 1rem;
     border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px var(--color-shadow);
     transition: transform 0.2s ease;
 }
 
 .skillCard:hover {
     transform: scale(1.05);
-    background-color: #2a2a2e;
+    background-color: var(--color-background-secondary);
 }
 
 .skillName {
     font-weight: 500;
+    color: var(--color-text-secondary);
+
 }
