@@ -4,6 +4,8 @@ import HeroSection from "./components/HeroSection/HeroSection.tsx";
 import AboutMe from "./components/AboutMe/AboutMe.tsx";
 import Projects from "./components/Projects/Projects.tsx";
 import Skills from "./components/Skills/Skills.tsx";
+import Contact from "./components/Contact/Contact.tsx";
+import Footer from "./components/Footer/Footer.tsx";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <AboutMe />
       <Projects />
       <Skills />
+      <Contact />
+      <Footer />
     </div>
   );
 }

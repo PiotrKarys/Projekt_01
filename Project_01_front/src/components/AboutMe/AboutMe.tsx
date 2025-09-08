@@ -3,7 +3,7 @@ import styles from "./AboutMe.module.css";
 
 const AboutMe = () => {
   return (
-    <section className={styles.aboutSection}>
+    <section id="about" className={styles.aboutSection}>
       <div className={styles.contentWrapper}>
         <div className={styles.imageWrapper}>
           <img

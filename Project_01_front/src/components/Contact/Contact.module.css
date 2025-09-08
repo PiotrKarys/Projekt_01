@@ -1,0 +1,52 @@
+/* w pliku: src/components/Contact.module.css */
+
+.contactSection {
+    width: 100%;
+    padding: clamp(3rem, 8vw, 5rem) clamp(1rem, 4vw, 2rem);
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #242424;
+}
+
+.title {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 40ch;
+    margin: 0 auto 2.5rem auto;
+}
+
+.linksWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    /* Zawijanie na mniejszych ekranach */
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.contactLink {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    background-color: #535bf2;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.contactLink:hover {
+    transform: scale(1.05);
+    background-color: #4148c2;
+}
+
+.icon {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}

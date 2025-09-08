@@ -29,7 +29,7 @@ const projectsData: ProjectCardProps[] = [
 ];
 const Projects = () => {
   return (
-    <section className={styles.projectsSection}>
+    <section id="projects" className={styles.projectsSection}>
       <h2 className={styles.title}>Moje Projekty</h2>
       <div className={styles.projectsGrid}>
         {projectsData.map(project => (
