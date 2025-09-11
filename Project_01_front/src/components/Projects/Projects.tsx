@@ -2,6 +2,7 @@ import ProjectCard, {
   type ProjectCardProps,
 } from "../ProjectsCard/ProjectCard";
 import styles from "./Projects.module.css";
+import ScrollIndicator from "../ScrollIndicator/ScrollIndicator";
 
 const projectsData: ProjectCardProps[] = [
   {
@@ -35,6 +36,7 @@ const Projects = () => {
           <ProjectCard key={project.title} {...project} />
         ))}
       </div>
+      <ScrollIndicator href="#skill" />
     </section>
   );
 };

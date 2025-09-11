@@ -13,6 +13,7 @@ function App() {
       <HeroSection
         title="Piotras"
         subtitle="Specjalista ds. bezpieczeństwa & Entuzjasta Web Developmentu."
+        projects="Moje projekty"
       />
       <AboutMe />
       <Projects />

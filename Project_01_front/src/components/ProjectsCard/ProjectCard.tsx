@@ -1,4 +1,6 @@
 import styles from "./ProjectCard.module.css";
+import { useInView } from "react-intersection-observer";
+
 export type ProjectCardProps = {
   title: string;
   description: string;
@@ -12,8 +14,13 @@ const ProjectCard = ({
   imageUrl,
   technologies,
 }: ProjectCardProps) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+    rootMargin: "-30% 0px -30% 0px",
+  });
   return (
-    <div className={styles.card}>
+    <div ref={ref} className={`${styles.card} ${inView ? styles.visible : ""}`}>
       <img
         src={imageUrl}
         alt={`${title} screenshot`}

@@ -1,5 +1,5 @@
 import styles from "./Skills.module.css";
-
+import SkillCard from "../SkillCard/SkillCard";
 const skillsData = [
   { name: "HTML5" },
   { name: "CSS3" },
@@ -13,13 +13,11 @@ const skillsData = [
 
 const Skills = () => {
   return (
-    <section className={styles.skillsSection}>
+    <section id="skill" className={styles.skillsSection}>
       <h2 className={styles.title}>Technologie i Umiejętności</h2>
       <div className={styles.skillsGrid}>
-        {skillsData.map(skill => (
-          <div key={skill.name} className={styles.skillCard}>
-            <span className={styles.skillName}>{skill.name}</span>
-          </div>
+        {skillsData.map((skill, index) => (
+          <SkillCard key={skill.name} name={skill.name} index={index} />
         ))}
       </div>
     </section>

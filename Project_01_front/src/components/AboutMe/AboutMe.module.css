@@ -1,10 +1,19 @@
 .aboutSection {
+    position: relative;
     width: 100%;
     padding: clamp(3rem, 8vw, 5rem) clamp(1rem, 4vw, 2rem);
     background-color: var(--color-background-secondary);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
     scroll-margin-top: 5.5rem;
+    opacity: 0;
+    transform: translateY(3rem);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.aboutSection.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .contentWrapper {

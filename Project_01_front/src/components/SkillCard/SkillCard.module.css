@@ -1,0 +1,34 @@
+.skillCard {
+    background-color: #242424;
+    padding: 1.5rem 1rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    /* Logika animacji */
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.skillCard.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.skillCard:hover {
+    transform: scale(1.05);
+    /* Musimy uwzględnić stan .visible */
+}
+
+.skillCard.visible:hover {
+    transform: scale(1.05);
+}
+
+.skillName {
+    font-weight: 500;
+    word-break: break-word;
+}

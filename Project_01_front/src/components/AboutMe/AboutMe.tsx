@@ -1,8 +1,21 @@
 import styles from "./AboutMe.module.css";
+import { useInView } from "react-intersection-observer";
+import ScrollIndicator from "../ScrollIndicator/ScrollIndicator";
 
 const AboutMe = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+    delay: 100,
+    rootMargin: "-30% 0px -30% 0px",
+  });
+
   return (
-    <section id="about" className={styles.aboutSection}>
+    <section
+      id="about"
+      ref={ref}
+      className={`${styles.aboutSection} ${inView ? styles.visible : ""}`}
+    >
       <div className={styles.contentWrapper}>
         <div className={styles.imageWrapper}>
           <img
@@ -22,6 +35,7 @@ const AboutMe = () => {
           </p>
         </div>
       </div>
+      <ScrollIndicator href="#projects" />
     </section>
   );
 };
