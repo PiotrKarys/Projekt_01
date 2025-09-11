@@ -3,7 +3,7 @@ import styles from "./AboutMe.module.css";
 
 const AboutMe = () => {
   return (
-    <section className={styles.aboutSection}>
+    <section id="about" className={styles.aboutSection}>
       <div className={styles.contentWrapper}>
         <div className={styles.imageWrapper}>
           <img
@@ -13,13 +13,11 @@ const AboutMe = () => {
           />
         </div>
         <div className={styles.textWrapper}>
-          <h2 className={styles.title}>
-            <p>O mnie</p>
-          </h2>
-          <p>
+          <h2 className={styles.title}>O mnie</h2>
+          <p className={styles.subtitle}>
             Jestem specjalistą ds. bezpieczeństwa i entuzjastą web developmentu.
           </p>
-          <p>
+          <p className={styles.subtitle}>
             Po godzinach lubię grać w gry online i oglądać filmy. Lubię również
             programować i tworzyć nowe projekty.
           </p>

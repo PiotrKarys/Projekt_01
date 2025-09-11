@@ -8,7 +8,7 @@ type HeroSectionProps = {
 
 const HeroSection = ({ title, subtitle }: HeroSectionProps) => {
   return (
-    <section className={styles.hero}>
+    <section id="home" className={styles.hero}>
       <h1 className={styles.title}>{title}</h1>
       <p className={styles.subtitle}>{subtitle}</p>
     </section>
