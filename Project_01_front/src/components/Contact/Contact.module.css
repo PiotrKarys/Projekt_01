@@ -5,6 +5,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
     background-color: var(--color-background);
+    scroll-margin-top: 5.5rem;
 }
 
 .title {

@@ -1,38 +1,52 @@
 .navbar {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     max-width: 1200px;
     padding: 1rem clamp(1rem, 4vw, 2rem);
-    background-color: var(--color-background-secondary);
-    display: flex;
-    box-shadow: 0 2px 4px var(--color-shadow);
+    background-color: var(--color-nav);
     box-sizing: border-box;
+    box-shadow: 0 2px 4px var(--color-background);
     position: fixed;
     top: 0;
     z-index: 1000;
 }
 
 .navList {
-    max-width: 1200px;
-    width: 100%;
+    display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     gap: clamp(2rem, 4vw, 3rem);
 }
 
 .navLink {
     color: var(--color-text-primary);
     text-decoration: none;
-    font-size: 1rem;
     font-weight: 500;
     transition: color 0.25s;
 }
 
 .navLink:hover {
     color: var(--color-accent);
+}
+
+.themeToggleButton {
+    background: none;
+    border: 1px solid var(--color-text-secondary, #888);
+    color: var(--color-text-primary);
+    padding: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    line-height: 1;
+    transition: background-color 0.2s ease;
+}
+
+.themeToggleButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .hamburgerButton {
@@ -42,40 +56,41 @@
     border: none;
     color: var(--color-text-primary);
     cursor: pointer;
-    padding: 0.5rem;
-    transition: 1010;
-    z-index: 1001;
+    z-index: 1010;
 }
 
+.mobileThemeToggleItem {
+    display: none;
+}
 
-@media (max-width: 768px) {
-
-    .navbar {
-        justify-content: flex-end;
-        padding: 0.75rem 1.5rem;
-        max-width: 1200px;
-    }
-
-    .controlsContainer {
-        z-index: 1010;
-        position: relative;
-    }
+@media (max-width: 767px) {
 
     .hamburgerButton {
         display: block;
     }
 
+    .desktopThemeToggle {
+        display: none;
+    }
+
+    .mobileThemeToggleItem {
+        display: list-item;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
     .navList {
         position: fixed;
         top: 0;
-        left: 50%;
-        width: 50%;
-        height: 50vh;
+        left: 0;
+        width: 100%;
+        height: 100vh;
         background-color: var(--color-background-secondary);
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 2rem;
+
         transform: translateY(-100%);
         transition: transform 0.3s ease-in-out;
     }
@@ -85,7 +100,6 @@
     }
 
     .navLink {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
-
 }

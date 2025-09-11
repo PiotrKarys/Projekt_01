@@ -13,20 +13,20 @@ const Navbar = () => {
   }, [theme]);
 
   const closeMenu = () => setIsMenuOpen(false);
-
+  const themeToggleButton = (
+    <button onClick={toggleTheme} className={styles.themeToggleButton}>
+      {theme === "dark" ? <FaSun /> : <FaMoon />}
+    </button>
+  );
   return (
     <nav className={styles.navbar}>
-      <div className={styles.controlsContainer}>
-        <button className={styles.themeToggleButton} onClick={toggleTheme}>
-          {theme === "dark" ? <FaSun /> : <FaMoon />}
-        </button>
-        <button
-          className={styles.hamburgerButton}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? <FaTimes /> : <FaBars />}
-        </button>
-      </div>
+      <div className={styles.desktopThemeToggle}>{themeToggleButton}</div>
+      <button
+        className={styles.hamburgerButton}
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
+        {isMenuOpen ? <FaTimes /> : <FaBars />}
+      </button>
       <ul
         className={`${styles.navList} ${isMenuOpen ? styles.activeMenu : ""}`}
       >
@@ -50,6 +50,7 @@ const Navbar = () => {
             Kontakt
           </a>
         </li>
+        <li className={styles.mobileThemeToggleItem}>{themeToggleButton}</li>
       </ul>
     </nav>
   );

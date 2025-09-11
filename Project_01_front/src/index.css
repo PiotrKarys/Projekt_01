@@ -1,6 +1,7 @@
 :root {
   cursor: default;
-  --color-background: #242424;
+  --color-nav: #5a5a5a;
+  --color-background: #3b3a3a;
   --color-background-secondary: #1a1a1a;
   --color-surface: #2a2a2e;
   --color-shadow: rgba(255, 255, 255, 0.7);
@@ -8,6 +9,8 @@
   --color-text-secondary: rgba(255, 255, 255, 0.7);
   --color-accent: #535bf2;
   --color-accent-hover: #4148c2;
+  --color-bordershadow: rgba(255, 255, 255, 0.2);
+  --color-bordershadow-hover: rgba(255, 255, 255, 0.1);
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -23,6 +26,7 @@
 }
 
 [data-theme='light'] {
+  --color-nav: #f4f4f8;
   --color-background: #f4f4f8;
   --color-background-secondary: #ffffff;
   --color-surface: #eef0f2;
@@ -31,6 +35,9 @@
   --color-accent: #646cff;
   --color-accent-hover: #535bf2;
   --color-shadow: rgba(0, 0, 0, 0.2);
+  --color-bordershadow: rgba(255, 255, 255, 0.2);
+  --color-bordershadow-hover: rgba(255, 255, 255, 0.1);
+  background-color: var(--color-background);
 }
 
 body {
@@ -44,4 +51,5 @@ section {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 16px;
+  border-radius: 100px;
 }
