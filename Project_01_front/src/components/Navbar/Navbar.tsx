@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 import React from "react";
+=======
+import { useState, useEffect } from "react";
+>>>>>>> Stashed changes
 import styles from "./Navbar.module.css";
 const Navbar = () => {
   return (

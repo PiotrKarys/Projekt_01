@@ -1,4 +1,3 @@
-import React from "react";
 import ProjectCard, {
   type ProjectCardProps,
 } from "../ProjectsCard/ProjectCard";
