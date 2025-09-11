@@ -8,11 +8,7 @@ const skillsData = [
   { name: "React" },
   { name: "Node.js" },
   { name: "Express" },
-  { name: "Git" },
-  { name: "PostgreSQL" },
   { name: "REST API" },
-  { name: "CSS Grid" },
-  { name: "Flexbox" },
 ];
 
 const Skills = () => {

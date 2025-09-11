@@ -1,10 +1,10 @@
-/* w pliku: src/components/Projects.module.css */
-
 .projectsSection {
     width: 100%;
     padding: clamp(3rem, 8vw, 5rem) clamp(1rem, 4vw, 2rem);
     box-sizing: border-box;
-    background-color: #242424;
+    background-color: var(--color-background);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    scroll-margin-top: 5.5rem;
 }
 
 .title {
@@ -12,44 +12,33 @@
     font-size: clamp(2rem, 4vw, 2.5rem);
     margin-top: 0;
     margin-bottom: 3rem;
+    color: var(--color-text-primary);
 }
 
-/* === BAZA (MOBILE FIRST) - poniżej 480px === */
 .projectsGrid {
     display: grid;
-    /* Domyślnie zawsze jedna kolumna */
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    /* Mniejszy odstęp na telefonach */
     max-width: 500px;
-    /* Ograniczamy szerokość dla jednej kolumny */
     margin: 0 auto;
 }
 
-/* === WIĘKSZE TELEFONY - od 480px === */
 @media (min-width: 480px) {
     .projectsGrid {
         gap: 2rem;
-        /* Lekko zwiększamy odstęp */
     }
 }
 
-/* === TABLETY - od 768px === */
 @media (min-width: 768px) {
     .projectsGrid {
-        /* Przełączamy na dwie kolumny */
         grid-template-columns: repeat(2, 1fr);
         max-width: 900px;
-        /* Zwiększamy limit szerokości */
     }
 }
 
-/* === DUŻE EKRANY - od 1200px === */
 @media (min-width: 1200px) {
     .projectsGrid {
-        /* Przełączamy na trzy kolumny */
         grid-template-columns: repeat(3, 1fr);
         max-width: 1200px;
-        /* Zwiększamy limit do ostatecznej wartości */
     }
 }

@@ -1,0 +1,14 @@
+.footer {
+    width: 100%;
+    padding: 3rem 1rem;
+    background-color: var(--color-background-secondary);
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px var(--color-background);
+}
+
+.footer p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+}
